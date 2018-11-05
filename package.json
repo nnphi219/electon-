@@ -1,0 +1,23 @@
+{
+  "name": "electon-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnphi219/electon-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nnphi219/electon-/issues"
+  },
+  "homepage": "https://github.com/nnphi219/electon-#readme",
+  "dependencies": {
+    "electron-prebuilt": "^1.4.13"
+  }
+}
