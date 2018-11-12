@@ -4,8 +4,12 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const Menu = electron.Menu;
 
+const menuTemplate = require('./menu')
+
+let mainWindow = null;
+
 app.on('ready', _ => {
-    new BrowserWindow();
+    mainWindow = new BrowserWindow();
 
     const name = electron.app.getName();
     const template = [
@@ -28,6 +32,9 @@ app.on('ready', _ => {
             }]
         }
     ];
-    const menu = Menu.buildFromTemplate(template)
-    Menu.setApplicationMenu(menu);
+    // const menu = Menu.buildFromTemplate(template)
+    // Menu.setApplicationMenu(menu);
+
+    const menuContens = Menu.buildFromTemplate(menuTemplate(mainWindow))
+    Menu.setApplicationMenu(menuContens)
 });
